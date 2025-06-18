@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spootify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <circle cx="15" cy="15" r="15" fill="#1db954"/>
+            </svg>
+            <h1>spootify</h1>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2L3 9h2v7h4v-5h2v5h4V9h2L10 2z"/>
+                </svg>
+                home
+            </a>
+            <a href="top2025.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 1l2.5 7.5H20l-6 4.5 2.5 7.5L10 15l-6.5 5.5 2.5-7.5L0 8.5h7.5L10 1z"/>
+                </svg>
+                top 2025
+            </a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="top-bar">
+            <input type="text" id="username" placeholder="enter your name">
+            <div class="user-display" id="user-display">welcome</div>
+        </div>
+
+        <div class="content">
+            <h2>your library</h2>
+            
+            <div class="track-list">
+                <div class="track" data-song="feel-it">
+                    <img src="covers/feel-it.png" alt="feel it">
+                    <div class="track-info">
+                        <h3>feel it</h3>
+                        <p>d4vd</p>
+                    </div>
+                    <button class="play-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M3 2v12l10-6L3 2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="track" data-song="saturn">
+                    <img src="covers/saturn.png" alt="saturn">
+                    <div class="track-info">
+                        <h3>saturn</h3>
+                        <p>sza</p>
+                    </div>
+                    <button class="play-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M3 2v12l10-6L3 2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="track" data-song="glue-song">
+                    <img src="covers/glue-song.png" alt="glue song">
+                    <div class="track-info">
+                        <h3>glue song</h3>
+                        <p>beabadoobee</p>
+                    </div>
+                    <button class="play-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M3 2v12l10-6L3 2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="track" data-song="so-cynical">
+                    <img src="covers/so-cynical.png" alt="so cynical">
+                    <div class="track-info">
+                        <h3>so cynical (badum)</h3>
+                        <p>le sserafim</p>
+                    </div>
+                    <button class="play-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M3 2v12l10-6L3 2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="track" data-song="right-now">
+                    <img src="covers/right-now.png" alt="right now">
+                    <div class="track-info">
+                        <h3>right now</h3>
+                        <p>newjeans</p>
+                    </div>
+                    <button class="play-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M3 2v12l10-6L3 2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="player">
+        <div class="now-playing">
+            <img id="current-cover" src="covers/placeholder.png" alt="now playing">
+            <div class="song-info">
+                <h4 id="current-title">select a song</h4>
+                <p id="current-artist">spootify</p>
+            </div>
+        </div>
+        
+        <div class="player-controls">
+            <button id="prev-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M11 3v10l-6-5 6-5zm-6 0v10H3V3h2z"/>
+                </svg>
+            </button>
+            <button id="play-pause-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M5 3v14l11-7L5 3z"/>
+                </svg>
+            </button>
+            <button id="next-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M5 3v10l6-5-6-5zm6 0v10h2V3h-2z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="progress-area">
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

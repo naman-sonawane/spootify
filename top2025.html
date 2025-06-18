@@ -1,0 +1,147 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spootify - top 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <circle cx="15" cy="15" r="15" fill="#1db954"/>
+            </svg>
+            <h1>spootify</h1>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2L3 9h2v7h4v-5h2v5h4V9h2L10 2z"/>
+                </svg>
+                home
+            </a>
+            <a href="top2025.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 1l2.5 7.5H20l-6 4.5 2.5 7.5L10 15l-6.5 5.5 2.5-7.5L0 8.5h7.5L10 1z"/>
+                </svg>
+                top 2025
+            </a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="top-bar">
+            <input type="text" id="username" placeholder="enter your name">
+            <div class="user-display" id="user-display">welcome</div>
+        </div>
+
+        <div class="content">
+            <div class="header-section">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" class="chart-icon">
+                    <rect width="80" height="80" rx="8" fill="url(#gradient)"/>
+                    <path d="M25 55V35l10-10 10 15 10-20v35H25z" fill="white"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b35"/>
+                            <stop offset="100%" style="stop-color:#f7931e"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="header-info">
+                    <p>playlist</p>
+                    <h1>top songs 2025</h1>
+                    <p>the biggest hits right now</p>
+                </div>
+            </div>
+            
+            <div class="track-list">
+                <div class="track-header">
+                    <span>#</span>
+                    <span>title</span>
+                    <span>artist</span>
+                </div>
+
+                <div class="track top-track" data-song="ordinary">
+                    <span class="track-number">1</span>
+                    <img src="covers/ordinary.png" alt="ordinary">
+                    <div class="track-info">
+                        <h3>ordinary</h3>
+                        <p>alex warren</p>
+                    </div>
+                    <button class="play-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M3 2v12l10-6L3 2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="track top-track" data-song="nokia">
+                    <span class="track-number">2</span>
+                    <img src="covers/nokia.png" alt="nokia">
+                    <div class="track-info">
+                        <h3>nokia</h3>
+                        <p>drake</p>
+                    </div>
+                    <button class="play-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M3 2v12l10-6L3 2z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="track top-track" data-song="bad-dreams">
+                    <span class="track-number">3</span>
+                    <img src="covers/bad-dreams.png" alt="bad dreams">
+                    <div class="track-info">
+                        <h3>bad dreams</h3>
+                        <p>teddy swims</p>
+                    </div>
+                    <button class="play-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M3 2v12l10-6L3 2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="player">
+        <div class="now-playing">
+            <img id="current-cover" src="covers/placeholder.png" alt="now playing">
+            <div class="song-info">
+                <h4 id="current-title">select a song</h4>
+                <p id="current-artist">spootify</p>
+            </div>
+        </div>
+        
+        <div class="player-controls">
+            <button id="prev-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M11 3v10l-6-5 6-5zm-6 0v10H3V3h2z"/>
+                </svg>
+            </button>
+            <button id="play-pause-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M5 3v14l11-7L5 3z"/>
+                </svg>
+            </button>
+            <button id="next-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M5 3v10l6-5-6-5zm6 0v10h2V3h-2z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="progress-area">
+            <div class="progress-bar" id="progress-bar">
+            <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
